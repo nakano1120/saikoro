@@ -82,6 +82,22 @@
           display:inline-block;
           width:20vw;
       }
+
+      .box4 {
+          float: left;
+          border-color: green;
+          width: 25%;
+          font-size: 30px;
+      }
+      .boxA {
+      border: none;
+      }
+
+      .boxA:after {
+          content: "";
+          display: block;
+          clear: both;
+      }
     </style>
 </head>
 <body>
@@ -95,6 +111,14 @@
         <br>
         <span class="big">{{msg}}</span><br>
         <input type="button" value="ダイス" v-on:click="diceroll">
+        <div class="boxA">
+            <div class="box4">1P<br>{{p[0]}}<br>{{yaku[0]}}</div>
+
+            <div class="box4">2P<br>{{p[1]}}<br>{{yaku[1]}}</div>
+            <div class="box4">3P<br>{{p[2]}}<br>{{yaku[2]}}</div>
+            
+            <div class="box4">4P<br>{{p[3]}}<br>{{yaku[3]}}</div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
